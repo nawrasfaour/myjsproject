@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(121, 170, 114);
+    
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+    
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+.search {
+    --padding: 14px;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f6f6f6;
+    width: 45%;
+    transition: box-shadow 0.25s;
+    margin-bottom: 20px;
+}
+
+.search:focus-within {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-input {
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+.search-input::placeholder,
+.search-icon {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-list {
+    margin: auto;
+    justify-content: space-between;
+    width: 50%;
+    border: 3px solid green;
+    padding: var(--padding);
+    margin-top: 20px; 
+    background-color: #f6f6f6;
+}
+
+
+.search , .contact-list {
+    margin: auto;
+    justify-content: space-between;   
+     width: 50%;
+    border: 3px solid green;
+    padding: var(--padding);
+  }
+
+  .contact-list{
+    margin-top: var(--padding);
+  }
+
+  .contact-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+  .contact-list li {
+    display: flex;
+    margin-left:10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding) 0;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+.name {
+    flex: 1; /* Take up remaining space */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333333;
+    font-family: 'Lexend', sans-serif;
+    margin-left: 10px; /* Adjust left margin as needed */
+}
+
+.delete-icon,.edit ,.about{
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.add-icon {
+    cursor: pointer;
+    margin-bottom: 10px; 
+    display: block;
+}
+.contact-photo{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+ 
