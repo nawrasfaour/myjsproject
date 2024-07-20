@@ -1,19 +1,17 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(121, 170, 114);
-    
+    background-color: plum;
 }
 
 header {
     text-align: center;
     margin: 20px 0;
-    
 }
 
 .container {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
-   
+    display: block;
 }
 
 .search {
@@ -26,6 +24,8 @@ header {
     width: 45%;
     transition: box-shadow 0.25s;
     margin-bottom: 20px;
+    display: flex;
+    margin-left: 26%;
 }
 
 .search:focus-within {
@@ -52,60 +52,50 @@ header {
     margin: auto;
     justify-content: space-between;
     width: 50%;
-    border: 3px solid green;
+    border: 3px solid purple;
     padding: var(--padding);
-    margin-top: 20px; 
     background-color: #f6f6f6;
+    border-radius: 20px;
 }
 
-
-.search , .contact-list {
-    margin: auto;
-    justify-content: space-between;   
-     width: 50%;
-    border: 3px solid green;
-    padding: var(--padding);
-  }
-
-  .contact-list{
-    margin-top: var(--padding);
-  }
-
-  .contact-list ul {
+.contact-list ul {
     list-style: none;
     padding: 0;
 }
 
-  .contact-list li {
+.contact-list li {
     display: flex;
-    margin-left:10px;
+    margin-left: 10px;
     justify-content: space-between;
     align-items: center;
     padding: var(--padding) 0;
     border-bottom: 1px solid #ddd;
 }
 
-
-
 .name {
-    flex: 1; /* Take up remaining space */
-    font-size: 16px; /* Adjust font size as needed */
+    flex: 1;
+    font-size: 16px;
     color: #333333;
     font-family: 'Lexend', sans-serif;
-    margin-left: 10px; /* Adjust left margin as needed */
+    margin-left: 10px;
 }
 
-.delete-icon,.edit ,.about{
+.action {
     cursor: pointer;
-    margin-left: 2px;
+    margin: 3%;
+    display: block;
 }
 
 .add-icon {
     cursor: pointer;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     display: block;
+    padding: 0;
+    border: none;
+    background: none;
 }
-.contact-photo{
+
+.contact-photo {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -114,7 +104,60 @@ header {
     margin-top: 10px;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
 
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
 
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color:purple;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
- 
+.actions {
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#aboutContent {
+    text-align: left;
+    margin-top: 10px;
+}
+.delete-all-icon
+{
+   text-align: end;
+}

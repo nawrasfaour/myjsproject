@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phonebook</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header>
@@ -18,60 +18,38 @@
                 <input class="search-input" type="search" placeholder="Search for contact">
             </div>
         </form>
-
         <section>
             <div class="contact-list">
-                <span class="material-symbols-outlined add-icon">add</span>
-                <ul>
-                    <li>
-                        <img src="accets/empty-profile.jpg" alt="John Doe" class="contact-photo">
-                        <span class="name">John Doe</span>
-                       <span class="action">
-                        <span class=" edit material-symbols-outlined">edit</span>
-                        <span class="delete-icon material-symbols-outlined">delete</span>
-                        <span class="about material-symbols-outlined">info</span>
-                    </span> 
-                        <li>
-                            <img src="accets/empty-profile.jpg" alt="Janine Smith" class="contact-photo">
-                            <span class="name">Janine Smith</span>
-                            <span class="action">
-                                <span class=" edit material-symbols-outlined">edit</span>
-                                <span class="delete-icon material-symbols-outlined">delete</span>
-                                <span class="about material-symbols-outlined">info</span>
-                            </span> 
-                        </li>
-                    <li>
-                        <img src="accets/penelope-featherington.jpg" alt="Penelope Featherington" class="contact-photo">
-                        <span class="name">Penelope Featherington</span>
-                        <span class="action">
-                            <span class=" edit material-symbols-outlined">edit</span>
-                            <span class="delete-icon material-symbols-outlined">delete</span>
-                            <span class="about material-symbols-outlined">info</span>
-                        </span> 
-                    </li>
-                    <li>
-                        <img src="accets/kfc.jpg" alt="KFC" class="contact-photo">
-                        <span class="name">KFC</span>
-                        <span class="action">
-                            <span class=" edit material-symbols-outlined">edit</span>
-                            <span class="delete-icon material-symbols-outlined">delete</span>
-                            <span class="about material-symbols-outlined">info</span>
-                        </span> 
-                    </li>
-                    <li>
-                        <img src="accets/lenovo" alt="Lenovo" class="contact-photo">
-                        <span class="name">Lenovo Support</span>
-                        <span class="action">
-                            <span class=" edit material-symbols-outlined">edit</span>
-                            <span class="delete-icon material-symbols-outlined">delete</span>
-                            <span class="about material-symbols-outlined">info</span>
-                        </span> 
-                    </li>
-                
+                <button class="material-symbols-outlined add-icon" onclick="openModal()">add</button>
+                <span class="material-symbols-outlined delete-all-icon" onclick="deleteAllContacts()">delete</span>
+                <ul id="contact-list">
+                   
+                </ul>
             </div>
         </section>
     </div>
-    <script src="Js.js"></script>
+    <div class="modal" id="myModal" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn" onclick="closeModal(event)">&times;</button>
+            <h2 id="modalTitle">Add/Edit Contact</h2>
+            <input type="text" id="inputUserId" placeholder="ID (leave blank for new)">
+            <input type="text" id="inputUserName" placeholder="Username">
+            <input type="phone" id="inputUserPhone" placeholder="Phone">
+            <input type="email" id="inputUserEmail" placeholder="Email">
+            <div class="actions">
+                <button class="btn" onclick="saveContact()">Save</button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+    <div class="modal" id="aboutModal" onclick="closeAboutModal(event)">
+        <div class="modal-content">
+            <button class="close-btn" id="closeAboutModalBtn" onclick="closeAboutModal(event)">&times;</button>
+            <h2 id="aboutTitle">Contact Information</h2>
+            <p id="aboutContent">Details about the contact will appear here.</p>
+        </div>
+    </div>
+    <script src="javascript/Js.js"></script>
 </body>
 </html>
-
